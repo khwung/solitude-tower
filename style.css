@@ -693,6 +693,87 @@ body {
 
 
 
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 26px;
+    line-height: 1.3;
+    word-break: keep-all;
+  }
+
+  .section-title p,
+  .overview-text p,
+  .timeline-item p,
+  .floor-card p,
+  .rank-info-box p {
+    font-size: 14px;
+    line-height: 1.75;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .countdown-timer {
+    font-size: 26px;
+    letter-spacing: 1px;
+    padding: 14px 10px;
+  }
+
+  .quote-box {
+    font-size: 16px;
+    padding: 20px 16px;
+  }
+
+  .rank-table {
+    font-size: 14px;
+  }
+
+  .rank-col h3 {
+    font-size: 16px;
+  }
+
+  .namecard-title {
+    font-size: 24px;
+    letter-spacing: 4px;
+    padding: 10px 28px;
+    white-space: nowrap;
+  }
+
+  .floor-card h3 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .floor-card {
+    overflow: hidden;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 이미지 클릭 확대 */
 .namecard-grid img,
 .leader-card img {
