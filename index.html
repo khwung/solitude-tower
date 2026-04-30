@@ -1,13 +1,602 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>solitude-tower</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>고독의 탑</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 좌측 고정 메뉴 -->
+  <aside class="sidebar">
+    <div class="logo">
+      <h1>고독의 탑</h1>
+      <p>TOWER OF SOLITUDE</p>
+    </div>
+
+    <nav class="side-nav">
+      <a href="#overview">탑 개요</a>
+      <a href="#guilds">주요 세력</a>
+      <a href="#rank">등급 및 대우</a>
+      <a href="#floors">층별 정보</a>
+      <a href="#cards">명함 정보</a>
+    </nav>
+
+    <div class="side-bottom">
+      <div class="tower-mark">♜</div>
+      <p>
+        길드는 생존자를 보호하지만,<br>
+        동시에 최강의 선별자다.<br>
+        가치 없는 도전자는<br>
+        언제든 버려진다.
+      </p>
+    </div>
+  </aside>
+
+<main class="main-content">
+
+  <section class="countdown-section">
+    <div class="countdown-label">인류 멸망까지 남은 시간</div>
+    <div class="countdown-timer" id="countdownTimer">
+      계산 중...
+    </div>
+    <div class="countdown-period">
+      2020.01.01 → 2035.01.01
+    </div>
+  </section>
+
+  <!-- 탑 개요 -->
+  <section id="overview" class="section">
+    <img class="hero-img" src="./tower/TowerExterior.png" alt="고독의 탑 외부">
+
+      <div class="section-title">
+        <h2>1. 탑 개요</h2>
+        <p>생존과 자본의 생존계 데스 게임</p>
+      </div>
+
+
+      <div class="content-card overview-card">
+
+  <h3 class="overview-title">고독의 탑</h3>
+
+  <div class="quote-box">
+    <b>“탑에 떠오른 카운트다운 15년.<br>
+    제한 시간 내에 뚫지 못하면, 인류는 멸망한다.”</b>
+  </div>
+
+  <div class="overview-timeline">
+
+  <div class="timeline-item">
+    <h4>1. 시작과 몰락 (2020년)</h4>
+    <p>
+      2020년, 전 세계 각국의 수도에 동시에 100층 규모의 [고독의 탑]이 솟아올랐다.
+      탑의 문을 처음 연 이들은 특별한 영웅이 아닌 평범한 인간들이었다.
+      탑은 그들을 '선구자'라 부르며 시작부터 SSS급 능력을 부여했고,
+      인류는 그들이 세상을 구원할 것이라 믿었다.
+    </p>
+  </div>
+
+  <div class="timeline-item">
+    <h4>2. 생중계된 비극</h4>
+    <p>
+      그러나 그들은 전투 경험이 전무한 현대인이었다.
+      2층에서, SSS급 능력을 가진 선구자들이 고작 3마리의 고블린에게 도륙당하는 장면이
+      전 세계에 실시간으로 생중계되었다.
+    </p>
+  </div>
+
+  <div class="timeline-item">
+    <h4>3. 자본의 시대와 길드</h4>
+    <p>
+      인류는 깨달았다. 이것은 게임이 아니라 잔혹한 현실이라는 것을.
+      비극은 자본이 되었고, 거대 기업의 투자로 탄생한 '길드'는
+      탑을 거대한 전쟁터이자 자본의 시장으로 바꾸어 놓았다.
+    </p>
+  </div>
+
+  <div class="timeline-item">
+    <h4>4. 현재의 위기 (2026년)</h4>
+    <p>
+      현재는 2026년. 탑 최상단의 카운트다운은 단 9년을 가리키고 있다.
+      제한 시간 내 100층을 돌파하지 못하면 인류는 멸망한다.
+      그러나 탑은 여전히 기업의 돈벌이 수단일 뿐이다.
+    </p>
+  </div>
+
+</div>
+
+    </section>
+
+    <!-- 주요 세력 -->
+    <section id="guilds" class="section">
+      <div class="section-title">
+        <h2>2. 주요 세력 및 현재 상황</h2>
+        <p>탑을 둘러싼 세력과 그들의 경쟁</p>
+      </div>
+
+      <div class="guild-grid">
+
+        <div class="guild-card arcadia">
+          <img src="./emblem/arcadia.png" alt="아르카디아 엠블렘">
+          <h3>아르카디아</h3>
+          <p><b>규모:</b> 약 1,500명</p>
+          <p><b>특징:</b> 국내 선구자 보유 및 압도적 1위 세력</p>
+          <div class="guild-tag">정보력, 조직력, 균형 잡힌 전력</div>
+        </div>
+
+        <div class="guild-card white-night">
+          <img src="./emblem/Baekya.png" alt="백야 엠블렘">
+          <h3>백야</h3>
+          <p><b>규모:</b> 약 1,000명</p>
+          <p><b>특징:</b> 여성 대표 중심의 화력 특화 길드</p>
+          <div class="guild-tag">화력, 속도, 정밀 타격</div>
+        </div>
+
+        <div class="guild-card ironblood">
+          <img src="./emblem/ironblood.png" alt="철혈 엠블렘">
+          <h3>철혈</h3>
+          <p><b>규모:</b> 약 1,000명</p>
+          <p><b>특징:</b> 무력과 의리 중심의 용병 집단</p>
+          <div class="guild-tag">근접전 강점, 생존력 우수</div>
+        </div>
+
+      </div>
+
+      <div class="notice-box">
+        <h3>현재 동향</h3>
+        <p>
+          51층 이상 정예 파티의 사망 발생으로 인해
+          1층 로비에서 스카우터들의 <b>유망주 영입 전쟁</b>이 시작되었다.
+        </p>
+      </div>
+    </section>
+
+    
+   <!-- 등급 및 대우 -->
+<section id="rank" class="section">
+  <div class="section-title">
+    <h2>3. 등급별 대우 및 지원</h2>
+    <p>
+      태생은 출발선이지만, 등반으로도 증명할 수 있다.
+    </p>
+  </div>
+
+  <div class="rank-info-box">
+    <p>
+  <b>태생 등급</b>은 각성 시점의 <b>절대적인 출발선</b>이다.
+  <b>SS~SSS급 고태생</b>은 등반을 하지 않아도 처음부터 <b>막대한 자원과 최상위 대우</b>를 보장받는다.
+</p>
+
+<p>
+  반면 <b>E~D급 저태생</b>은 아무런 보호 없이 시작하며,
+  생존과 등반 자체가 곧 경쟁이 된다.
+</p>
+
+<p>
+  탑은 공정하지 않다.
+  <b>태생이 높을수록 더 쉽게 강해지고, 더 많은 지원을 받는다.</b>
+</p>
+
+<p>
+  그러나 단 하나,
+  <b>층수</b>만은 거짓말을 하지 않는다.
+  살아남아 올라온 자만이, 비로소 자신의 가치를 증명한다.
+</p>
+  </div>
+
+  <div class="rank-table">
+        <div class="rank-col">
+          <h3>하위 도전자<br><span>1~20층</span></h3>
+          <strong>E ~ D</strong>
+          <ul>
+            <li>기본 장비 지급</li>
+            <li>공동 숙소 제공</li>
+            <li>최소한의 식량 지원</li>
+            <li>기초 훈련 참여</li>
+          </ul>
+        </div>
+
+        <div class="rank-col">
+          <h3>중위 도전자<br><span>21~50층</span></h3>
+          <strong>C ~ B</strong>
+          <ul>
+            <li>개인 장비 지급</li>
+            <li>파티 구성 지원</li>
+            <li>중급 소모품 제공</li>
+            <li>개인 숙소 제공</li>
+          </ul>
+        </div>
+
+        <div class="rank-col">
+          <h3>증명자<br><span>51층 이상</span></h3>
+          <strong>A ~ S</strong>
+          <ul>
+            <li>고급 아티팩트 지급</li>
+            <li>전용 장비 세트 제공</li>
+            <li>최상급 치료 지원</li>
+            <li>공략 우선권</li>
+          </ul>
+        </div>
+
+        <div class="rank-col">
+          <h3>최상위<br><span>71층 이상</span></h3>
+          <strong>SS ~ SS+</strong>
+          <ul>
+            <li>맞춤형 아티팩트 제작</li>
+            <li>전용 파티 구성</li>
+            <li>자유로운 자원 사용</li>
+            <li>길드 내 의사결정 참여</li>
+          </ul>
+        </div>
+
+        <div class="rank-col">
+          <h3>선구자<br><span>SSS 태생</span></h3>
+          <strong>SSS 이상</strong>
+          <ul>
+            <li>모든 자원 제한 없음</li>
+            <li>길드 지배 구조 최상위</li>
+            <li>명령권 및 절대 권한</li>
+            <li>개인 세력 수준의 영향력</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="floors" class="section">
+
+  <div class="section-title">
+    <h2>4. 층별 정보</h2>
+    <p>탑은 단순한 던전이 아니다. 층이 오를수록 세계는 완전히 달라진다.</p>
+  </div>
+
+  <div class="floor-card single">
+    <img src="/tower/Lobby.png" alt="1층 로비">
+    <div>
+      <h3>1층 — 로비</h3>
+      <p>입장자와 각성자들이 처음 도착하는 안전지대.</p>
+      <p>각성, 길드 스카우트, 3대 길드의 만물상과 경매장이 존재한다.</p>
+    </div>
+  </div>
+
+  <div class="floor-card single">
+    <img src="/floor/3F/3F.png" alt="1~4층 자격의 관문">
+    <div>
+      <h3>1~4층 — 자격의 관문</h3>
+      <p>생존, 판단, 전술, 의지를 시험하는 초입 구간.</p>
+      <p>2층은 함정과 퍼즐, 3층은 고블린 전투, 4층은 홉고블린과 정신 압박 시험으로 구성된다.</p>
+    </div>
+  </div>
+
+  <div class="floor-grid">
+
+    <div class="floor-card half">
+      <img src="/floor/10F/Dungeon.png" alt="5~10층 던전">
+      <div>
+        <h3>5~10층 — 던전 구간</h3>
+        <p>어두운 석조 던전과 좁은 통로가 이어지는 첫 본격 전투 구간.</p>
+        <p><b>출현 몬스터:</b> 동굴 슬라임, 흡혈 박쥐, 고블린 보병, 고블린 궁수, 동굴 맹독거미</p>
+        <p><b>보스:</b> 홉 고블린 주술사</p>
+      </div>
+    </div>
+
+    <div class="floor-card half">
+      <img src="/floor/20F/Plains.png" alt="11~20층 평원">
+      <div>
+        <h3>11~20층 — 평원 지대</h3>
+        <p>넓은 시야와 개활지 전투가 중심이 되는 구간. 기동력과 파티 진형이 중요해진다.</p>
+        <p><b>출현 몬스터:</b> 굶주린 들개, 변이된 거대 사마귀, 초원 멧돼지, 난폭한 뿔소, 오크 정찰병</p>
+        <p><b>보스:</b> 오크 전사 & 오크 투척병</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="floor-grid">
+
+    <div class="floor-card half">
+      <img src="/floor/30F/Rocky.png" alt="21~30층 돌산">
+      <div>
+        <h3>21~30층 — 돌산 지대</h3>
+        <p>험준한 고지대와 낙석이 지배하는 전장. 위치 선점이 곧 생존이다.</p>
+        <p><b>출현 몬스터:</b> 돌연변이 산양, 산악 늑대 무리, 붉은부리 거대 독수리, 하피, 바위 골렘</p>
+        <p><b>보스:</b> 트롤</p>
+      </div>
+    </div>
+
+    <div class="floor-card half">
+      <img src="/floor/40F/Desert.png" alt="31~40층 사막">
+      <div>
+        <h3>31~40층 — 사막 지대</h3>
+        <p>열기와 탈수, 모래 속 기습이 도전자를 갉아먹는 소모전 구간.</p>
+        <p><b>출현 몬스터:</b> 미라, 붉은 눈 하이에나, 사막 독사, 모래 잠복 웜, 데스 스토커</p>
+        <p><b>보스:</b> 대왕 전갈</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="floor-grid">
+
+    <div class="floor-card half">
+      <img src="/floor/50F/Ruins.png" alt="41~50층 폐허">
+      <div>
+        <h3>41~50층 — 폐허 지대</h3>
+        <p>무너진 도시와 죽은 자들의 잔향이 뒤엉킨 구간. 공포와 지속전이 핵심이다.</p>
+        <p><b>출현 몬스터:</b> 묘지기 들개 무리, 부패한 구울, 스켈레톤 병사, 스켈레톤 궁수, 원혼</p>
+        <p><b>보스:</b> 언데드 오우거</p>
+      </div>
+    </div>
+
+    <div class="floor-card half">
+      <img src="/floor/60F/SwampFog.png" alt="51~60층 안개 늪지">
+      <div>
+        <h3>51~60층 — 안개 늪지</h3>
+        <p>시야가 막히고 독과 환각이 쌓이는 구간. 판단 착오가 곧 사망으로 이어진다.</p>
+        <p><b>출현 몬스터:</b> 환각 나방, 맹독 두꺼비, 식인 덩굴괴수, 진흙 골렘, 늪지 악어</p>
+        <p><b>보스:</b> 늪지 괴수</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="floor-grid">
+
+    <div class="floor-card half">
+      <img src="/floor/70F/Snow.png" alt="61~70층 설산">
+      <div>
+        <h3>61~70층 — 설산 지대</h3>
+        <p>혹한과 눈보라가 체력을 빼앗는 구간. 장비와 보급이 전투력만큼 중요하다.</p>
+        <p><b>출현 몬스터:</b> 눈보라 매, 서리 늑대 무리, 얼음 송곳니 멧돼지, 중급 얼음 정령, 설인</p>
+        <p><b>보스:</b> 아이스 변이 트롤</p>
+      </div>
+    </div>
+
+    <div class="floor-card half">
+      <img src="/floor/80F/Volcano.png" alt="71~80층 화산">
+      <div>
+        <h3>71~80층 — 화산 지대</h3>
+        <p>고온, 용암, 폭발성 지형이 도전자를 압박한다. 실수 한 번이 즉사로 이어진다.</p>
+        <p><b>출현 몬스터:</b> 화염 박쥐, 마그마 슬라임, 헬하운드, 파이어 샐러맨더, 용암 골렘</p>
+        <p><b>보스:</b> 헬 와이번</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="floor-grid">
+
+    <div class="floor-card half">
+      <img src="/floor/90F/Glacier.png" alt="81~90층 빙하">
+      <div>
+        <h3>81~90층 — 빙하 지대</h3>
+        <p>극한의 냉기와 얼어붙은 지형. 이동 자체가 전투가 되는 고위층 구간.</p>
+        <p><b>출현 몬스터:</b> 서리 망령, 아이스 가고일, 아이스 드레이크, 드래곤 뉴트, 서리 거인</p>
+        <p><b>보스:</b> 아이스 드래곤</p>
+      </div>
+    </div>
+
+    <div class="floor-card half">
+      <img src="/floor/99F/DemonRealm.png" alt="91~99층 마계">
+      <div>
+        <h3>91~99층 — 마계 지대</h3>
+        <p>탑의 법칙이 뒤틀리는 최심부. 인간의 상식과 기존 전술이 거의 통하지 않는다.</p>
+        <p><b>출현 몬스터:</b> 하급 마족 전사, 서큐버스/인큐버스, 타락한 가고일, 마계 융합수, 지옥 기사</p>
+        <p><b>보스:</b> 마왕의 사도</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="floor-card single final">
+    <img src="/floor/100F/DemonCastle.png" alt="100층 마왕성">
+    <div>
+      <h3>100층 — 마왕성</h3>
+      <p>모든 등반의 종착지. 제한 시간 안에 이곳을 돌파하지 못하면 인류는 멸망한다.</p>
+      <p><b>최종 보스:</b> 심연의 대악마</p>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section id="cards" class="section">
+
+  <div class="section-title">
+    <h2>5. 명함 정보</h2>
+    <p>탑을 오르는 각성자들의 스테이터스 카드</p>
+     <p>이미지를 클릭시 큰 화면으로 보실 수 있습니다.</p>
+  </div>
+
+  <!-- 아르카디아 -->
+  <div class="namecard-group arcadia-border">
+    <h3 class="namecard-title arcadia-title">아르카디아</h3>
+
+    <div class="leader-card">
+      <img src="/Card/Yeonwoo.png" alt="서연우">
+    </div>
+
+    <div class="namecard-grid">
+      <img src="/Card/Jinhyeok.png" alt="강진혁">
+      <img src="/Card/Harin.png" alt="유하린">
+      <img src="/Card/Minji.png" alt="이민지">
+      <img src="/Card/Raon.png" alt="한라온">
+      <img src="/Card/Gain.png" alt="서가인">
+      <img src="/Card/Seoa.png" alt="이서아">
+      <img src="/Card/Iseo.png" alt="강이서">
+      <img src="/Card/Rumi.png" alt="정루미">
+      <img src="/Card/Sehee.png" alt="신세희">
+    </div>
+  </div>
+
+  <!-- 백야 -->
+  <div class="namecard-group baekya-border">
+    <h3 class="namecard-title baekya-title">백야</h3>
+
+    <div class="leader-card">
+      <img src="/Card/Sia.png" alt="차시아">
+    </div>
+
+    <div class="namecard-grid">
+      <img src="/Card/Yseoa.png" alt="윤서아">
+      <img src="/Card/Jia.png" alt="송지아">
+      <img src="/Card/Soyoon.png" alt="박소윤">
+      <img src="/Card/Pharin.png" alt="박하린">
+      <img src="/Card/Mira.png" alt="최미라">
+      <img src="/Card/Onia.png" alt="오니아">
+      <img src="/Card/Rea.png" alt="한레아">
+      <img src="/Card/Arin.png" alt="백아린">
+      <img src="/Card/Anna.png" alt="안나">
+    </div>
+  </div>
+
+  <!-- 철혈 -->
+  <div class="namecard-group ironblood-border">
+    <h3 class="namecard-title ironblood-title">철혈</h3>
+
+    <div class="leader-card">
+      <img src="/Card/Jintae.png" alt="차진태">
+    </div>
+
+    <div class="namecard-grid">
+      <img src="/Card/Yuri.png" alt="최유리">
+      <img src="/Card/Dohyeon.png" alt="김도현">
+      <img src="/Card/Dain.png" alt="윤다인">
+      <img src="/Card/Taegun.png" alt="김태건">
+      <img src="/Card/Junhyuk.png" alt="이준혁">
+      <img src="/Card/Siwoo.png" alt="박시우">
+      <img src="/Card/Seorin.png" alt="윤서린">
+      <img src="/Card/Taeyeon.png" alt="하태연">
+      <img src="/Card/dohan.png" alt="권도한">
+    </div>
+  </div>
+
+  <!-- 무소속 -->
+  <div class="namecard-group solo-border">
+    <h3 class="namecard-title solo-title">무소속</h3>
+
+    <div class="leader-card">
+      <img src="/Card/hwanung.png" alt="이환웅">
+    </div>
+
+    <div class="namecard-grid">
+      <img src="/Card/Aria.png" alt="서리아">
+      <img src="/Card/Hseorin.png" alt="하서린">
+      <img src="/Card/Yeonhwa.png" alt="이연화">
+      <img src="/Card/Hoseong.png" alt="백호성">
+      <img src="/Card/Iseul.png" alt="김이슬">
+      <img src="/Card/Narae.png" alt="권나래">
+      <img src="/Card/Yumi.png" alt="최유미">
+      <img src="/Card/Gayeong.png" alt="한가영">
+      <img src="/Card/Yujin.png" alt="강유진">
+    </div>
+  </div>
+
+</section>
+
+
+  </main>
+
+<script>
+  const targetDate = new Date("2035-01-01T00:00:00+09:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const timer = document.getElementById("countdownTimer");
+
+    if (distance <= 0) {
+      timer.innerHTML = "00년 00일 00:00:00";
+      return;
+    }
+
+    const daysTotal = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const years = Math.floor(daysTotal / 365);
+    const days = daysTotal % 365;
+
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    timer.innerHTML =
+      `${years}년 ${days}일 ` +
+      `${String(hours).padStart(2, "0")}:` +
+      `${String(minutes).padStart(2, "0")}:` +
+      `${String(seconds).padStart(2, "0")}`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="imageLightbox" class="image-lightbox">
+  <button class="lightbox-close" type="button">×</button>
+  <img id="lightboxImage" src="" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  document.querySelectorAll(".namecard-grid img, .leader-card img").forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImage.src = img.src;
+      lightbox.classList.add("active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      lightbox.classList.remove("active");
+    }
+  });
+</script>
+
+
+</body>
 </html>
