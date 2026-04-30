@@ -1,0 +1,691 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f8f7f3;
+  color: #222;
+  font-family: "Noto Serif KR", "Malgun Gothic", serif;
+}
+
+/* 좌측 고정 메뉴 */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 190px;
+  height: 100vh;
+  background: #fffdf8;
+  border-right: 1px solid #e4ded2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  width: 100%;
+  padding: 42px 20px 38px;
+  text-align: center;
+  border-bottom: 1px solid #eee5d8;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.logo p {
+  margin: 8px 0 0;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.side-nav {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.side-nav a {
+  display: block;
+  padding: 18px 28px;
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+  border-left: 4px solid transparent;
+  transition: 0.25s;
+}
+
+.side-nav a:hover {
+  background: #f5efe4;
+  color: #9a7b4f;
+  border-left: 4px solid #b79a6b;
+}
+
+.side-bottom {
+  margin-top: auto;
+  padding: 30px 18px 50px;
+  text-align: center;
+  color: #8a8277;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.tower-mark {
+  font-size: 56px;
+  color: #d7cbb8;
+  margin-bottom: 20px;
+}
+
+/* 중앙 콘텐츠 */
+.main-content {
+  margin-left: 190px;
+  width: calc(100% - 190px);
+}
+
+.section {
+  width: 78%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 0;
+  scroll-margin-top: 40px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.section-title {
+  text-align: center;
+  margin: 42px 0 32px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.section-title p {
+  margin-top: 14px;
+  color: #777;
+  font-size: 15px;
+}
+
+/* 카드 공통 */
+.content-card,
+.notice-box,
+.floor-card {
+  background: #fffdf8;
+  border: 1px solid #e5ded2;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+/* 탑 개요 */
+.overview-card {
+  padding: 40px 52px;
+  line-height: 1.9;
+}
+
+.overview-card h3 {
+  font-size: 26px;
+  margin-top: 0;
+}
+
+/* ===== 탑 개요 업그레이드 ===== */
+
+.overview-card {
+  padding: 50px 60px;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(180deg, #fffdf8 0%, #f4efe6 100%);
+}
+/* 우측 라인 포인트 */
+.overview-card::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #b79a6b, #6b4e2e);
+}
+
+/* 좌측 라인 포인트 */
+.overview-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #b79a6b, #6b4e2e);
+}
+
+/* 제목 */
+.overview-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* 인용문 박스 */
+.quote-box {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: 600;
+
+  padding: 26px 42px;
+  margin-bottom: 34px;
+
+  border-left: 4px solid #b79a6b;
+  border-right: 4px solid #b79a6b;
+
+  background: linear-gradient(90deg, #f1eee8 0%, #fbf8f1 50%, #f1eee8 100%);
+  color: #2f2418;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* 본문 */
+.overview-text {
+  text-align: center;
+}
+
+.overview-text p {
+  margin: 16px 0;
+  line-height: 1.9;
+  font-size: 16px;
+  color: #333;
+}
+
+
+/* 강조 문장 */
+.overview-timeline {
+  margin-top: 34px;
+  display: grid;
+  gap: 18px;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 24px 28px 24px 34px;
+  background: rgba(255, 253, 248, 0.75);
+  border: 1px solid #e2d8c8;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.035);
+}
+
+
+.timeline-item h4 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: #5f4326;
+  letter-spacing: 0.5px;
+}
+
+.timeline-item p {
+  margin: 0;
+  line-height: 1.9;
+  font-size: 15px;
+  color: #2f2a23;
+}
+
+/* 주요 세력 */
+.guild-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.guild-card {
+  background: #fffdf8;
+  border: 1px solid #e0d8cc;
+  border-radius: 8px;
+  padding: 32px 26px 24px;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.05);
+}
+
+.guild-card img {
+   width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.guild-card h3 {
+  margin: 0 0 18px;
+  font-size: 25px;
+}
+
+.guild-card p {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.guild-tag {
+  margin-top: 22px;
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+.arcadia .guild-tag {
+  background: #b09568;
+}
+
+.white-night .guild-tag {
+  background: #334b73;
+}
+
+.ironblood .guild-tag {
+  background: #9f3434;
+}
+
+.notice-box {
+  margin-top: 26px;
+  padding: 28px 40px;
+  text-align: center;
+}
+
+.notice-box h3 {
+  margin: 0 0 10px;
+  color: #9a7b4f;
+}
+
+.notice-box b {
+  color: #b33b3b;
+}
+
+/* 등급 설명 박스 */
+.rank-info-box {
+  width: 100%;
+  margin: 0 auto 28px;
+  padding: 24px 36px;
+  background: #fffdf8;
+  border: 1px solid #e5ded2;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 1.9;
+  color: #4a4036;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+
+.rank-info-box p {
+  margin: 6px 0;
+}
+
+.rank-info-box b {
+  color: #9a6a2f;
+}
+
+
+
+/* 등급표 */
+.rank-table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: #fffdf8;
+  border: 1px solid #d9d0c2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rank-col {
+  padding: 24px 20px;
+  border-right: 1px solid #e2dbd1;
+  text-align: center;
+}
+
+.rank-col:last-child {
+  border-right: none;
+}
+
+.rank-col h3 {
+  margin: -24px -20px 20px;
+  padding: 18px 8px;
+  background: #2d2d33;
+  color: white;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.rank-col h3 span {
+  font-size: 13px;
+  color: #ddd;
+}
+
+.rank-col strong {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 20px;
+  color: #8d6d3f;
+}
+
+.rank-col ul {
+  padding-left: 18px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* 층별 정보 */
+.floor-card {
+  display: flex;
+  gap: 34px;
+  padding: 22px;
+  margin-bottom: 26px;
+  align-items: center;
+}
+
+.floor-card img {
+  width: 36%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.floor-card h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.floor-card p {
+  line-height: 1.8;
+  color: #444;
+}
+
+/* 반응형 */
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 150px;
+  }
+
+  .main-content {
+    margin-left: 150px;
+    width: calc(100% - 150px);
+  }
+
+  .section {
+    width: 86%;
+  }
+
+  .guild-grid,
+  .rank-table {
+    grid-template-columns: 1fr;
+  }
+
+  .rank-col {
+    border-right: none;
+    border-bottom: 1px solid #e2dbd1;
+  }
+
+  .floor-card {
+    flex-direction: column;
+  }
+
+  .floor-card img {
+    width: 100%;
+  }
+}
+
+/* 실시간 카운트다운 */
+.countdown-section {
+  width: 78%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 0 10px;
+  text-align: center;
+}
+
+.countdown-label {
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: #8d6d3f;
+  margin-bottom: 10px;
+}
+
+.countdown-timer {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #181818;
+  padding: 18px 24px;
+  border: 1px solid #d9d0c2;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fffdf8, #f3eee4);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.06);
+}
+
+.countdown-period {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #8a8277;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   명함 정보
+========================= */
+
+.namecard-group {
+  position: relative;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  padding: 90px 50px 56px;
+  background: #fffdf8;
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+}
+
+/* 큰 박스 테두리 */
+.arcadia-border {
+  border: 2px solid #b79a6b;
+}
+
+.baekya-border {
+  border: 2px solid #2f5f9f;
+}
+
+.ironblood-border {
+  border: 2px solid #9f3434;
+}
+
+.solo-border {
+  border: 2px solid #1f1f1f;
+}
+
+/* 제목 박스: 큰 테두리 윗선 중앙에 걸치기 */
+.namecard-title {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: fit-content;
+  margin: 0;
+  padding: 12px 58px;
+
+  background: #fffdf8;
+  border-radius: 6px;
+
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  line-height: 1.2;
+
+  z-index: 5;
+}
+
+/* 제목 색 + 제목 테두리 */
+.arcadia-title {
+  color: #9a7b4f;
+  border: 2px solid #b79a6b;
+}
+
+.baekya-title {
+  color: #2f5f9f;
+  border: 2px solid #2f5f9f;
+}
+
+.ironblood-title {
+  color: #9f3434;
+  border: 2px solid #9f3434;
+}
+
+.solo-title {
+  color: #1f1f1f;
+  border: 2px solid #1f1f1f;
+}
+
+/* 수장 카드 */
+.leader-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 42px;
+}
+
+.leader-card img {
+  width: 52%;
+  min-width: 420px;
+  max-width: 620px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 20px 42px rgba(0,0,0,0.24);
+  transition: 0.25s;
+}
+
+.leader-card img:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* 나머지 9장: 3개씩 */
+.namecard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+.namecard-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.16);
+  transition: 0.25s;
+}
+
+.namecard-grid img:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 22px 42px rgba(0,0,0,0.25);
+}
+
+/* 반응형 */
+@media (max-width: 1100px) {
+  .namecard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .leader-card img {
+    width: 70%;
+    min-width: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 이미지 클릭 확대 */
+.namecard-grid img,
+.leader-card img {
+  cursor: pointer;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 40px;
+}
+
+.image-lightbox.active {
+  display: flex;
+}
+
+.image-lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.65);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 34px;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 54px;
+  cursor: pointer;
+}
