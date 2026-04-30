@@ -774,6 +774,63 @@ body {
 
 
 
+
+
+
+@media (max-width: 768px) {
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 100vh;
+    z-index: 1000;
+    padding-top: 20px;
+    overflow-y: auto; /* 추가 */
+  }
+
+  .logo h1 {
+    font-size: 14px;
+  }
+
+  .logo p {
+    display: none;
+  }
+
+  .side-nav a {
+    font-size: 11px;
+    padding: 12px 6px;
+    text-align: center;
+    white-space: nowrap; /* 추가 */
+  }
+
+  .side-nav a span {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 70px;
+    width: calc(100% - 70px); /* 추가 (중요) */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 이미지 클릭 확대 */
 .namecard-grid img,
 .leader-card img {
