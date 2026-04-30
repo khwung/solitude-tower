@@ -891,6 +891,55 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+.timeline-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #6b4e2e;
+  list-style: none;
+}
+
+.timeline-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-item summary::after {
+  content: " +";
+  float: right;
+  color: #b79a6b;
+}
+
+.timeline-item[open] summary::after {
+  content: " −";
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    padding: 14px 14px;
+  }
+
+  .timeline-item summary {
+    font-size: 15px;
+  }
+
+  .timeline-item p {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+
+
+
+
+
 /* 이미지 클릭 확대 */
 .namecard-grid img,
 .leader-card img {
