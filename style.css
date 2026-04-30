@@ -629,6 +629,48 @@ body {
 
 
 
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .section {
+    width: 92%;
+    padding: 44px 0;
+  }
+
+  .guild-grid,
+  .rank-table,
+  .namecard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leader-card img {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .floor-card {
+    flex-direction: column;
+  }
+
+  .floor-card img {
+    width: 100%;
+  }
+
+  .hero-img {
+    height: auto;
+  }
+}
+
+
 
 
 
