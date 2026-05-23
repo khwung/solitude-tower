@@ -36,16 +36,6 @@
 
 <main class="main-content">
 
-  <section class="countdown-section">
-    <div class="countdown-label">인류 멸망까지 남은 시간</div>
-    <div class="countdown-timer" id="countdownTimer">
-      계산 중...
-    </div>
-    <div class="countdown-period">
-      2020.01.01 → 2035.01.01
-    </div>
-  </section>
-
   <!-- 탑 개요 -->
   <section id="overview" class="section">
     <img class="hero-img" src="./tower/TowerExterior.png" alt="고독의 탑 외부">
@@ -59,11 +49,6 @@
       <div class="content-card overview-card">
 
   <h3 class="overview-title">고독의 탑</h3>
-
-  <div class="quote-box">
-    <b>“탑에 떠오른 카운트다운 15년.<br>
-    제한 시간 내에 뚫지 못하면, 인류는 멸망한다.”</b>
-  </div>
 
 <div class="overview-timeline">
 
@@ -514,38 +499,6 @@
 
   </main>
 
-<script>
-  const targetDate = new Date("2035-01-01T00:00:00+09:00").getTime();
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    const timer = document.getElementById("countdownTimer");
-
-    if (distance <= 0) {
-      timer.innerHTML = "00년 00일 00:00:00";
-      return;
-    }
-
-    const daysTotal = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const years = Math.floor(daysTotal / 365);
-    const days = daysTotal % 365;
-
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
-
-    timer.innerHTML =
-      `${years}년 ${days}일 ` +
-      `${String(hours).padStart(2, "0")}:` +
-      `${String(minutes).padStart(2, "0")}:` +
-      `${String(seconds).padStart(2, "0")}`;
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
 
 
 
